@@ -2,72 +2,78 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>콘텐츠 자료 안내 페이지</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tracking Landing Page</title>
 
-  <!-- 🔹<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-<!-- End Google Tag Manager -->
-
+  <!-- Google Tag Manager -->
   <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N33G8VRR');
   </script>
-  -->
+  <!-- End Google Tag Manager -->
 
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f9fafb;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       margin: 0;
-      padding: 0;
     }
     .container {
-      max-width: 600px;
-      margin: 80px auto;
       background: white;
       padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border-radius: 10px;
       text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 400px;
     }
-    h1 {
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
-    p {
-      color: #555;
-      line-height: 1.6;
-    }
-    .cta {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 28px;
-      background: #2563eb;
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #4f46e5;
       color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
     }
-    .cta:hover {
-      background: #1d4ed8;
+    button:hover {
+      background-color: #4338ca;
     }
   </style>
 </head>
 
 <body>
-  <!-- 🔹 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N33G8VRR"
+            height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
+  <div class="container">
+    <h1>📊 데이터 트래킹 테스트 페이지</h1>
+    <p>이 페이지는 GA4 + GTM 연동을 테스트하기 위한 랜딩 페이지입니다.</p>
 
- <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XX
+    <button id="cta-button">노션 링크 요청하기</button>
+  </div>
+
+  <script>
+    document.getElementById('cta-button').addEventListener('click', function() {
+      alert('CTA 버튼 클릭!');
+    });
+  </script>
+</body>
+</html>
